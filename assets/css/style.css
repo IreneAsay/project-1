@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+body {
+    background-image: url("../image/back_to_the_future.jpg");
+    background-size: 100%;
+    background-attachment: fixed; 
+}
+
+.form-control {
+    border-color: #990202;
+    font-size: 30px;
+}
+
+.btn-danger {
+    background-color: #990202;
+    font-size: 30px;
+}
+
+#CNN {
+    position: fixed;
+    bottom: 50px;
+    left: 50px; 
+}
+
+#TIME {
+    position: fixed;
+    bottom: 50px;
+    left: 170px; 
+}
+
+#YAHOO {
+    position: fixed;
+    bottom: 50px;
+    left: 290px; 
+}
