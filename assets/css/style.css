@@ -23,17 +23,18 @@ body {
 #CNN {
     position: fixed;
     bottom: 50px;
-    left: 50px; 
+    right: 50px; 
 }
 
 #TIME {
     position: fixed;
     bottom: 50px;
-    left: 170px; 
+    right: 170px; 
 }
 
 #YAHOO {
     position: fixed;
     bottom: 50px;
-    left: 290px; 
+    right: 290px; 
 }
+
