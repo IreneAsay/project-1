@@ -25,16 +25,19 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assetz/style.css" />
   </head>
+
   <body>
     <span>
       <div class="col-md-4">
         <img src="./assets/image/NetTimeTraveler.png" alt="NetTimeTraveler" />
       </div>
       <div class="col-md-4 text-right">
+        <!-- TO DO: add disclaimer for improper year entry -->
         <input
           type="text"
           class="form-control"
           placeholder="Enter a year between 1997-2020..."
+          id="searchInputYear"
         />
         <button type="button" class="btn btn-danger mt-2" id="search-button">
           Search
@@ -50,45 +53,30 @@
       </button>
     </span>
 
-    <div class="container">
-      <!-- I am the new content  -->
-      <h1>API Tests</h1>
-
-      <div id="insertTest"></div>
-
-      <form class="form-inline my-2 my-lg-0">
-        <input
-          class="form-control mr-sm-2"
-          id="searchInputUrl"
-          type="search"
-          placeholder="searchInputUrl"
-        />
-        <input
-          class="form-control mr-sm-2"
-          id="searchInputYear"
-          type="search"
-          placeholder="searchInputYear"
-        />
-        <button
-          class="searchBtn p-2 rounded fas fa-search"
-          type="submit"
-          id="searchBtn"
-        ></button>
-      </form>
-      <iframe
-        src=""
-        frameborder="0"
-        id="iframeTest"
-        title="iframeTest"
-        height="1000"
-        width="1000"
-      ></iframe>
-    </div>
+    <!-- Wayback information added here  -->
+    <div id="insertTest"></div>
+    <!-- Replace this field input later with hardcoded urls in the api -->
+    <form class="form-inline my-2 my-lg-0">
+      <input
+        class="form-control mr-sm-2"
+        id="searchInputUrl"
+        type="search"
+        placeholder="searchInputUrl"
+      />
+    </form>
+    <!-- This is the iframe for the returned searched website from Wayback -->
+    <iframe
+      src=""
+      frameborder="0"
+      id="iframeTest"
+      title="iframeTest"
+      height="1000"
+      width="1000"
+    ></iframe>
 
     <!-- jQuery CDN link -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./assetz/script.js"></script>
     <script src="./assets/test.js"></script>
   </body>
-  <html></html>
 </html>
