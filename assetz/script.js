@@ -19,9 +19,11 @@ $(document).ready(function () {
         $("#insertTest").append(`
           <p>Please Wait: Currently Loading the webpage for you</p>
         `);
-        var gifOne = $("<img>").attr("src", "./assetz/backToFuture.gif");
-        $("#insertTest").append(gifOne);
-        // "https://giphy.com/gifs/back-to-the-future-robert-zemeckis-103gOGGaHcBq3C","https://giphy.com/gifs/movie-back-to-the-future-doc-wR4bJk4jF5Tl6","https://giphy.com/gifs/back-to-the-future-delorean-regreso-al-futuro-7TZvWKVkm0xXi
+        var gifOne = $("<img>").attr("src", "./assets/image/giphytrailer.gif");
+        var gifTwo = $("<img>").attr("src", "./assets/image/giphytakeoff.webp");
+        var gifThree = $("<img>").attr("src", "./assets/image/onfiregif.webp");
+        $("#insertTest").append(gifOne, gifTwo, gifThree);
+       
         $("#iframeTest").attr("src", response.archived_snapshots.closest.url);
       })
       .catch(function (err) {
