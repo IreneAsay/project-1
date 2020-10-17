@@ -19,7 +19,7 @@ $(document).ready(function () {
         $("#insertTest").append(`
           <p>Please Wait: Currently Loading the webpage for you</p>
         `);
-        var gifOne = $("<img>").attr("src", "./assets/backToFuture.gif");
+        var gifOne = $("<img>").attr("src", "./assetz/backToFuture.gif");
         $("#insertTest").append(gifOne);
         // "https://giphy.com/gifs/back-to-the-future-robert-zemeckis-103gOGGaHcBq3C","https://giphy.com/gifs/movie-back-to-the-future-doc-wR4bJk4jF5Tl6","https://giphy.com/gifs/back-to-the-future-delorean-regreso-al-futuro-7TZvWKVkm0xXi
         $("#iframeTest").attr("src", response.archived_snapshots.closest.url);
@@ -30,7 +30,7 @@ $(document).ready(function () {
       });
   }
 
-  $("#searchBtn").on("click", function (event) {
+  $("#search-button").on("click", function (event) {
     event.preventDefault();
     var searchInputUrl = $("#searchInputUrl").val().trim();
     var searchInputYear = $("#searchInputYear").val().trim();
