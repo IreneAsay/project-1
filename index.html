@@ -7,24 +7,37 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>NetTimeTraveler</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <!-- Bootstrap CSS link -->
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css'/>
+        <!-- Link to css stylesheet -->
+        <link rel="stylesheet" href="./assets/css/style.css">
     </head>
     <body>
-        <h1>Project 1</h1>
+    <span>
+        <div class="col-md-4">
+            <img src="./assets/image/NetTimeTraveler.png" alt="NetTimeTraveler">
+        </div>
+        <div class="col-md-4 text-right">
+            <input type="text" class="form-control" placeholder="Enter a year between 1997-2020...">
+            <button type="button" class="btn btn-danger mt-2" id="search-button">Search</button>
+            <div style= "display: block; margin: auto;" id="imageNumber"></div>
+            
+            
+        </div>
+    </span>
+    <span>
+        <button type="button" class="btn btn-danger mt-2" id="CNN">CNN</button>
+        <button type="button" class="btn btn-danger mt-2" id="TIME">TIME</button>
+        <button type="button" class="btn btn-danger mt-2" id="YAHOO">YAHOO</button>
+    </span>
 
-        <button id="time-button" class="btnBtn-primary" style= "display: block; margin: auto;">time machine</button>
-        <div style= "display: block; margin: auto;" id="images"></div>
-
-        <button id="trippy-button" class="btnBtn-primary" style= "display: block; margin: auto;">local time machine</button>
-        <div style= "display: block; margin: auto;" id="local"></div>
-
-        
-      
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="script.js"></script>
-    </body>
-</html>
+    <!-- jQuery CDN link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+<html>
