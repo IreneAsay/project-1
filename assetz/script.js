@@ -1,6 +1,11 @@
 $(document).ready(function () {
   // console.log("This is a test");
 
+  // Both modal buttons are hidden on the initial landing page
+$(".modal-btn").hide();
+$(".giphy-modal-btn").hide();
+
+
   // This function presents a waiting message and retrieves the requested website and places it in an iframe.
   function searchArchive(searchInputYear) {
     //  Randomized list for the Wayback URL
@@ -24,6 +29,13 @@ $(document).ready(function () {
       searchInputYear +
       "1031";
 
+    // Incorrect year format triggers the error message modal
+    if(searchInputYear < 2000 || searchInputYear > 2020 || isNaN(searchInputYear)) {
+      $(".modal-btn").click();
+      return false;
+    }
+
+
     $.ajax({
       url: queryURL,
       method: "GET",
@@ -31,17 +43,19 @@ $(document).ready(function () {
       .then(function (response) {
         // Printing the entire object to console
         console.log(response);
-        $("#insertTest").append(`
-          <p>Please Wait: Currently Loading the webpage for you</p>
-        `);
+        $("#giphy-modal").modal("show");
+        // $("#insertTest").append(`
+        //   <p class="text-white">Please Wait: Currently Loading the webpage for you</p>
+        // `);
         // Gifs are added to the loading section
-        var gifOne = $("<img>").attr("src", "./assets/image/giphytrailer.gif");
-        var gifTwo = $("<img>").attr("src", "./assets/image/giphytakeoff.webp");
-        var gifThree = $("<img>").attr("src", "./assets/image/onfiregif.webp");
-        $("#insertTest").append(gifOne, gifTwo, gifThree);
+        // var gifOne = $("<img>").attr("src", "./assets/image/giphytrailer.gif");
+        // var gifTwo = $("<img>").attr("src", "./assets/image/giphytakeoff.webp");
+        // var gifThree = $("<img>").attr("src", "./assets/image/onfiregif.webp");
+        // $("#insertTest").append(gifOne, gifTwo, gifThree);
 
         $("#iframeTest").attr("src", response.archived_snapshots.closest.url);
         // REDO THIS SECTION WITH THE DYNAMIC ISBN VALUE
+        console.log($("#iframeTest")[0].contentWindow)
         $("#iframeTest2").attr(
           "src",
           "http://openlibrary.org/isbn/9784063872064"
@@ -55,6 +69,7 @@ $(document).ready(function () {
   // On click function created for the Search Button
   $("#search-button").on("click", function (event) {
     event.preventDefault();
+    $(".welcome").hide();
     var searchInputYear = $("#searchInputYear").val().trim();
     searchArchive(searchInputYear);
   });
@@ -62,5 +77,6 @@ $(document).ready(function () {
 // Loading message and gifs are being displayed.  After load completes then they are removed.
 $("#iframeTest").on("load", function () {
   $("#insertTest").empty();
-  $("#gifLocation").empty();
+  // $("#gifLocation").empty();
+  $("#giphy-modal").modal("hide");
 });

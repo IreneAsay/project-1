@@ -20,21 +20,24 @@ body {
     font-size: 30px;
 }
 
-#CNN {
-    position: fixed;
-    bottom: 50px;
-    right: 50px; 
+.iframe {
+    margin: 25px;
 }
 
-#TIME {
-    position: fixed;
-    bottom: 50px;
-    right: 170px; 
+
+.welcome {
+    font-size: 24px;
+    text-align: left;
+    background-color: #0008;
+    height: auto;
+    border-radius: 15px;
+    margin: 20px;
+    padding: 10px 20px;
+    color: #fff;
+    backdrop-filter: blur(5px);
 }
 
-#YAHOO {
-    position: fixed;
-    bottom: 50px;
-    right: 290px; 
+#giphy-modal {
+    background-color: #0008;
+    backdrop-filter: blur(5px); 
 }
-
