@@ -21,7 +21,7 @@ $(document).ready(function () {
     console.log(searchInputUrl);
     // URL for the Wayback machine is getting dynamically created
     var queryURL =
-      "https://cors-anywhere.herokuapp.com/http://archive.org/wayback/available?url=" +
+      "https://cors-anywhere.herokuapp.com/https://archive.org/wayback/available?url=" +
       searchInputUrl +
       "&timestamp=" +
       searchInputYear +
