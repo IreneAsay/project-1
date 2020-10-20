@@ -4,13 +4,13 @@ $(document).ready(function () {
   var isbnResult;
   var searchYear;
 
-  const DESIRED_NUMBER_OF_RESULTS = 20;
+  const DESIRED_NUMBER_OF_RESULTS = 10;
   // // Function that makes ajax call to fetch books and process business logic to give us all the books that pass our requirements
 
   function fetchBooks(offset = 0) {
     searchYear = $("#searchInputYear").val().trim();
 
-    const queryURL = `https://cors-anywhere.herokuapp.com/http://openlibrary.org/search.json?q=isbn&offset=${offset}`;
+    const queryURL = `https://openlibrary.org/search.json?q=isbn&offset=${offset}`;
     // return the ajax call (which is a promise) so that we can call `then` on it later OR we can use async/await (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
     return $.ajax({
       url: queryURL,
@@ -81,12 +81,15 @@ $(document).ready(function () {
     // we then use random math to pick an isbn from the array
 
     for (i = 0; i < books.length; i++) {
-      isbnInfo.push(books[i].isbn[0]);
+      // isbnInfo.push(books[i].isbn[0]);
+      isbnInfo.push(books[i].key);
     }
+
     var isbnResult = Math.floor(Math.random() * 20);
     isbnAnswer = isbnInfo[isbnResult];
+    // console.log(isbnInfo);
     console.log("the answer is " + isbnAnswer);
-    $("#iframeTest2").attr("src", "http://openlibrary.org/isbn/" + isbnAnswer);
+    $("#iframeTest2").attr("src", "https://openlibrary.org" + isbnAnswer);
   }
 
   // }
