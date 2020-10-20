@@ -2,9 +2,8 @@ $(document).ready(function () {
   // console.log("This is a test");
 
   // Both modal buttons are hidden on the initial landing page
-$(".modal-btn").hide();
-$(".giphy-modal-btn").hide();
-
+  $(".modal-btn").hide();
+  $(".giphy-modal-btn").hide();
 
   // This function presents a waiting message and retrieves the requested website and places it in an iframe.
   function searchArchive(searchInputYear) {
@@ -12,7 +11,6 @@ $(".giphy-modal-btn").hide();
     var websiteList = [
       "www.google.com",
       "www.cnn.com",
-      "www.yahoo.com",
       "www.people.com",
       "www.time.com",
     ];
@@ -30,11 +28,14 @@ $(".giphy-modal-btn").hide();
       "1031";
 
     // Incorrect year format triggers the error message modal
-    if(searchInputYear < 2000 || searchInputYear > 2020 || isNaN(searchInputYear)) {
+    if (
+      searchInputYear < 2000 ||
+      searchInputYear > 2020 ||
+      isNaN(searchInputYear)
+    ) {
       $(".modal-btn").click();
       return false;
     }
-
 
     $.ajax({
       url: queryURL,
@@ -44,22 +45,10 @@ $(".giphy-modal-btn").hide();
         // Printing the entire object to console
         console.log(response);
         $("#giphy-modal").modal("show");
-        // $("#insertTest").append(`
-        //   <p class="text-white">Please Wait: Currently Loading the webpage for you</p>
-        // `);
-        // Gifs are added to the loading section
-        // var gifOne = $("<img>").attr("src", "./assets/image/giphytrailer.gif");
-        // var gifTwo = $("<img>").attr("src", "./assets/image/giphytakeoff.webp");
-        // var gifThree = $("<img>").attr("src", "./assets/image/onfiregif.webp");
-        // $("#insertTest").append(gifOne, gifTwo, gifThree);
 
         $("#iframeTest").attr("src", response.archived_snapshots.closest.url);
         // REDO THIS SECTION WITH THE DYNAMIC ISBN VALUE
-        console.log($("#iframeTest")[0].contentWindow)
-        $("#iframeTest2").attr(
-          "src",
-          "http://openlibrary.org/isbn/9784063872064"
-        );
+        console.log($("#iframeTest")[0].contentWindow);
       })
       .catch(function (err) {
         console.log(`There was an error ${err.message}`);
