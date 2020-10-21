@@ -61,7 +61,10 @@ $(document).ready(function () {
         totalBooks = totalBooks.concat(results.books);
         console.log(totalBooks);
         // offset by number of total results
-        offset = results.numberFound;
+        offset += results.numberFound;
+        if (results.numberFound == 0) {
+          break;
+        }
       } catch (err) {
         console.log(`Error fetching books...`);
         console.log(err);
@@ -70,6 +73,7 @@ $(document).ready(function () {
     }
     return totalBooks;
   }
+
   // This function is here to also await getBookResults
   // When we use async on a function it turns it into a promise as well. We could have also done getBookResults().then(someFunction)
   async function run() {
@@ -85,7 +89,7 @@ $(document).ready(function () {
       isbnInfo.push(books[i].key);
     }
 
-    var isbnResult = Math.floor(Math.random() * 20);
+    var isbnResult = Math.floor(Math.random() * 10);
     isbnAnswer = isbnInfo[isbnResult];
     // console.log(isbnInfo);
     console.log("the answer is " + isbnAnswer);
