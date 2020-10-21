@@ -4,8 +4,9 @@
 
 NetTimeTraveler is an application that allows a user to travel back in time to a specific website archive and retrieves a book that was published in the same year.
 
-![Screenshot](assets/image/Screenshot3.png)
-
+![Landing Page](assets/image/Screenshot 1.png)
+![Error Modal](assets/image/Screenshot 2.png)
+![Search Results](assets/image/Screenshot 3.png)
 
 ## User Story
 
