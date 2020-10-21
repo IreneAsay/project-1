@@ -9,10 +9,9 @@ $(document).ready(function () {
   function searchArchive(searchInputYear) {
     //  Randomized list for the Wayback URL
     var websiteList = [
-      "www.google.com",
-      "www.cnn.com",
-      "www.people.com",
-      "www.time.com",
+      "https://www.google.com",
+      "https://www.cnn.com",
+      "https://www.time.com",
     ];
     // Randomized list is assigned to the input
     const randomUrl = Math.floor(Math.random() * websiteList.length);
