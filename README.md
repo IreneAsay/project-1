@@ -1,4 +1,6 @@
-# Net Time Traveler
+# Net Time Traveler 
+[Demo]([https://ireneasay.github.io/project-1/)
+
 
 ## Project Description 
 
@@ -7,6 +9,7 @@ NetTimeTraveler is an application that allows a user to travel back in time to a
 ![Landing Page](assets/image/Screenshot_1.png)
 ![Error Modal](assets/image/Screenshot_2.png)
 ![Search Results](assets/image/Screenshot_3.png)
+
 
 ## User Story
 
@@ -35,6 +38,7 @@ The main challenge for the group was working with books and the associated infor
 ## Credits
 
 Wayback Machine (https://archive.org/help/wayback_api.php)
+
 Open Library (https://openlibrary.org/dev/docs/api/books)
 
 
