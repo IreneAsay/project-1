@@ -1,6 +1,6 @@
 # Net Time Traveler 
 
-Demo([https://ireneasay.github.io/project-1/)
+Demo (https://ireneasay.github.io/project-1/)
 
 
 ## Project Description 
